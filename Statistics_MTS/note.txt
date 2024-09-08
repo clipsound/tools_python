@@ -1,0 +1,46 @@
+Di seguito l'Abstract la parte dei risultati è in rosso proprio perchè è provvisoria...(dalla letteratura viene fuori un tasso di sopravvivenza globale della popolazione è tra il 50-70% e un controllo locale tra 70-90% ad un anno....) non ho scritto altro perchè non so se riusciamo ad inserire gli altri dati:
+
+mi interessa sapere:
+
+- dalle curve di sopravvivenza quanti sono i deceduti ad un anno (calcolato con la colonna L 12 mesi)
+
+poi bisogna correlare:
+
+- la colonna J (dividendo due gruppi <=30 giorni e >30giorni) con la colonna N (quanti si e quanti no)
+
+- i SI della colonna N con la RT della colonna I  
+
+-i SI della colonna N e la X(..) della colonna I correlato con la L e con la P vivente
+
+
+
+si accetano suggerismenti/consigli
+
+
+
+Abstract
+
+Antonella Lombardo Michele Longhi Antonio Nicolato Anna D’amico Giorgia Bulgarelli Emanuele Zivelonghi Paolo Maria Polloniato
+
+Radiochirurgia Stereotassica con Gamma Knife preventiva su letto chirurgico dopo asportazione di metastasi cerebrale.
+
+
+
+INTRODUZIONE
+
+Diversi studi randomizzati hanno dimostrato che la SRS postoperatoria preventiva del letto chirurgico dopo asportazione di lesioni secondarie cerebrali fornisce un migliore controllo locale paragonato alla sola chirurgia e riduce significativamente il rischio di declino cognitivo paragonato alla WBRT senza diminuire la sopravvivenza globale. Si riporta la casistica del nostro centro dell’impiego della GKSRS(Radiochirurgia con Gamma Knife) preventiva sul letto chirurgico dopo asportazione di metastasi cerebrale.
+
+
+
+MATERIALI E METODI
+
+Noi portiamo la casistica del nostro centro: 65 pazienti (29 maschi e 36 femmine) trattati con GKSRS del cavo chirurgico(volume inferiore a 20cc) dopo asportazione della lesione secondaria dal 2009 al 2023. L’età media 63 anni. Le dose superficiale media prescritta 16 Gy al 50%. L’obiettivo è quello di valutare l’efficacia della radiochirurgia con gamma Knife preventiva su cavo chirurgico, nei pazienti sottoposti ad asportazione di metastasi cerebrali e con un numero limitato di localizzazioni cerebrale(< 3). 
+
+RISULTATI
+
+Dall’analisi statistica è emerso un controllo locale tra 70-80 % e tasso di sopravvivenza globaletra 50-70% a 12 mesi, in linea con la letteratura. I pazienti che ebbero una recidiva locale del tumore furono 26 di cui 5 furono candidati a RT  e 11 a secondo trattamento gamma knife sul residuo (4 di questi avevano seguito il primo trattamento SRS <=30 giorni). 
+
+CONCLUSIONI
+
+L’uso della GKSRS post-operatoria preventiva della cavità chirurgica dopo asportazione di metastasi cerebrali è una metodica radiante che consente il controllo della recidiva locale, anche in pazienti portatori di un limitato numero di lesioni secondarie cerebrali (<3), benché risulta fondamentale investigare sui protocolli di cura modulando la dose prescritta o frazionata, il timing dl trattamento post-operatorio, il counturing della lesione.
+
