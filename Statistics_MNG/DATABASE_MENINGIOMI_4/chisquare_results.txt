@@ -1,0 +1,39 @@
+responders = ['RIDOTTO', 'SCOMPARSO', 'RIDOTTO dal 50% al 90%', 'INVARIATO'])
+no responders = ['AUMENTATO', 'REDICIVA NL.', 'NON NOTO'])
+
+
+'IPE %', 'DS Gy', 'DM Gy', e 'VOL 12 Gy' hanno valori p inferiori a 0.05, indicando una forte evidenza contro l'ipotesi di indipendenza, suggerendo un'associazione significativa tra queste variabili e 'FU NeuroRx_NEW'.
+
+
+Chi-square test for 'FU NeuroRx' vs 'ETA'':
+Chi-square value: 372.895000502479
+P-value: 0.5644386606697281
+-----------------------------------------------------
+Chi-square test for 'FU NeuroRx' vs 'VOLUME in cc':
+Chi-square value: 1096.7985445227728
+P-value: 0.7810748969448357
+-----------------------------------------------------
+Chi-square test for 'FU NeuroRx' vs 'IPE %':
+Chi-square value: 89.11865177614911
+P-value: 0.5064427216061004
+-----------------------------------------------------
+Chi-square test for 'FU NeuroRx' vs 'DS Gy':
+Chi-square value: 297.0173828732245
+P-value: 0.1837902091681023
+-----------------------------------------------------
+Chi-square test for 'FU NeuroRx' vs 'DM Gy':
+Chi-square value: 348.46243317721934
+P-value: 5.34253156624608e-05
+-----------------------------------------------------
+Chi-square test for 'FU NeuroRx' vs 'N° SHOTS':
+Chi-square value: 196.07499092539035
+P-value: 0.6422295428156122
+-----------------------------------------------------
+Chi-square test for 'FU NeuroRx' vs 'AV DOSE Gy':
+Chi-square value: 559.7226178144127
+P-value: 0.9998215047969556
+-----------------------------------------------------
+Chi-square test for 'FU NeuroRx' vs 'VOL 12 Gy':
+Chi-square value: 120.37938871473355
+P-value: 0.3471116653359919
+-----------------------------------------------------
