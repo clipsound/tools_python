@@ -11,7 +11,7 @@ import seaborn as sns
 
 sopravvivenza_y = "survival [y]"
 sopravvivenza_m = "survival [m]"
-metric_selected = sopravvivenza_y
+metric_selected = sopravvivenza_m
 
 
 def map_values(x):
@@ -119,6 +119,10 @@ def data_preparation():
     field = "CENSOR"
     df[field] = df[field].apply(map_values)
     df = df[df[field] != 'Perso al FU']
+
+
+
+
     return df
 
 def km_Generic2class(dataframe, filterName=None, list_of_value1=None, list_of_value2=None, perfix_image_save=""):
