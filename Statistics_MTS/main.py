@@ -10,6 +10,7 @@ from statsmodels.formula.api import ols
 import statsmodels.api as sm
 import seaborn as sns
 import scipy.stats as stats
+from scipy.stats import fisher_exact
 import numpy as np
 import re
 
@@ -138,7 +139,6 @@ def clean_sheet_name(name):
     # Rimuovi caratteri non consentiti nei titoli dei fogli Excel
     cleaned_name = re.sub(r'[^\w\s]', '', name)
     return cleaned_name[:30]  # Limita la lunghezza del nome a 30 caratteri per la sicurezza
-
 
 def statistics(dataframe, filename=""):
     # Specifica i nomi delle colonne da escludere
@@ -270,12 +270,58 @@ def km_Generic2class(dataframe, filterName=None, list_of_value1=None, list_of_va
         return None, None
 
 
+def test_significance(dataframe, threshold=12, fup_threshold=24):
+
+    df = dataframe[dataframe["FUP mesi"] >= fup_threshold].copy()
+    df["GROUP"] = df["GIORNI CH-GK"].apply(lambda x: f"≤ {threshold}" if x <= threshold else f"> {threshold}")
+    contingency_table = pd.crosstab(df["GROUP"], df["LOCAL TUMOR PROGR RECURR"])
+    chi2, p_chi2, dof, expected = chi2_contingency(contingency_table)
+
+    if contingency_table.shape == (2, 2):
+        _, p_fisher = fisher_exact(contingency_table)
+    else:
+        p_fisher = None
+
+    return {
+        "contingency_table": contingency_table,
+        "chi2": chi2,
+        "p_chi2": p_chi2,
+        "p_fisher": p_fisher
+    }
+
+
+def find_optimal_threshold(dataframe, min_threshold=10, max_threshold=50, step=1):
+    best_threshold = None
+    best_p_value = float('inf')
+    best_result = None
+
+    for threshold in range(min_threshold, max_threshold + 1, step):
+        result = test_significance(dataframe, threshold)
+        p_value = result["p_chi2"]
+
+        if p_value < best_p_value:
+            best_p_value = p_value
+            best_threshold = threshold
+            best_result = result
+
+    return {
+        "best_threshold": best_threshold,
+        "best_p_value": best_p_value,
+        "result_for_best_threshold": best_result
+    }
+
+
+
 if __name__ == "__main__":
     file ="MTS_CH_GK_def3.xlsx"
     df = data_preparation(percorso_file_excel=file)
     statistics(dataframe=df, filename=file)
+    result = find_optimal_threshold(df, min_threshold=10, max_threshold=50, step=1)
+    print(result)
+    result = test_significance(df, 30)
+    print(result)
 
-
+else:
     # km_Generic2class(df, perfix_image_save="KMF_")
     _, _ = km_Generic2class(df, filterName="LOCAL TUMOR PROGR RECURR", list_of_value1=['SI'], list_of_value2=['NO'], perfix_image_save="SURVIVE_KMF_")
     _, _ = km_Generic2class(df, filterName="A DISTANZA (cerebrale e body)", list_of_value1=['SI'], list_of_value2=['NO'], perfix_image_save="SURVIVE_KMF_")
